@@ -1,0 +1,4 @@
+computer-graphics
+node_modules
+
+*.lock
