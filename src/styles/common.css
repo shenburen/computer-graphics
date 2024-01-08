@@ -1,0 +1,15 @@
+.canvas1 {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: blue;
+}
+
+.canvas2 {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: purple;
+}
