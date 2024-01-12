@@ -5,25 +5,26 @@
         <el-menu-item index="triangle">
           <span>第一个</span>
         </el-menu-item>
-        <el-menu-item index="haha">
-          <span>第一个</span>
-        </el-menu-item>
       </el-menu>
     </el-scrollbar>
   </div>
   <div class="box">
-    <RouterView></RouterView>
+    <Container :module="module"></Container>
   </div>
 </template>
 
 <script setup>
+import { ref } from "vue";
 import { useRouter } from "vue-router";
+import Container from "./Container.vue";
 
 const router = useRouter();
+const module = ref("");
 
 const MenuSelect = (index) => {
+  module.value = index;
   router.push({
-    path: "/" + index,
+    path: "/" + index + "/webgl",
   });
 };
 </script>
