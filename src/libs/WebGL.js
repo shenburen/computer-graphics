@@ -9,7 +9,9 @@ WebGL.init = (canvas) => {
   canvas.width = canvas.clientWidth;
   canvas.height = canvas.clientHeight;
 
-  gl.viewport();
+  gl.viewport(0, 0, canvas.width, canvas.height);
+
+  return gl;
 };
 
 export default WebGL;
