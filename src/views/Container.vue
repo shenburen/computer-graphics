@@ -39,5 +39,6 @@ const SwitchLanguage = (val) => {
 
 .body {
   height: calc(100% - 50px);
+  position: relative;
 }
 </style>
