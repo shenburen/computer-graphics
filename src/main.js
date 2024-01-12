@@ -1,4 +1,5 @@
 import "element-plus/dist/index.css";
+import "@/styles/global.scss";
 
 import { createApp } from "vue";
 

@@ -1,5 +1,7 @@
-<template></template>
+<template>
+  <Menu></Menu>
+</template>
 
-<script setup></script>
-
-<style lang="scss" scoped></style>
+<script setup>
+import Menu from "@/views/Menu.vue";
+</script>
