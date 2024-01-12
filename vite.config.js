@@ -1,4 +1,10 @@
+import { fileURLToPath, URL } from "node:url";
+
 import { defineConfig, splitVendorChunkPlugin } from "vite";
+import vue from "@vitejs/plugin-vue";
+import AutoImport from "unplugin-auto-import/vite";
+import Components from "unplugin-vue-components/vite";
+import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 
 export default defineConfig({
   base: "./",
@@ -11,5 +17,19 @@ export default defineConfig({
     port: 3000,
     host: "0.0.0.0",
   },
-  plugins: [splitVendorChunkPlugin()],
+  resolve: {
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url)),
+    },
+  },
+  plugins: [
+    vue(),
+    AutoImport({
+      resolvers: [ElementPlusResolver()],
+    }),
+    Components({
+      resolvers: [ElementPlusResolver()],
+    }),
+    splitVendorChunkPlugin(),
+  ],
 });

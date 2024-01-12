@@ -1,10 +1,11 @@
-const pages = ["test1", "test2"];
+import './assets/main.css'
 
-let btns = document.querySelectorAll(".btn");
-let iframe = document.querySelector("iframe");
+import { createApp } from 'vue'
+import App from './App.vue'
+import router from './router'
 
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", () => {
-    iframe.src = "./src/pages/" + pages[i] + ".html";
-  });
-}
+const app = createApp(App)
+
+app.use(router)
+
+app.mount('#app')

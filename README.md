@@ -11,7 +11,7 @@ yarn install
 ### 运行
 
 ```sh
-yarn start
+yarn dev
 ```
 
 ### 打包

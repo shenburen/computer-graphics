@@ -1,4 +1,4 @@
-computer-graphics
-node_modules
-
-*.lock
+.git/
+.vscode/
+node_modules/
+computer-graphics/
